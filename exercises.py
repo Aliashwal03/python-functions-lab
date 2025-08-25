@@ -86,7 +86,7 @@ print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
 print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
 
 
-print('--------------------------------------------------------------------------------')
+print('-------------------------------------------------------------------------------')
 
 
     # Exercise 5: Sum to N
