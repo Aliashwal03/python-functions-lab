@@ -73,12 +73,13 @@ print('-------------------------------------------------------------------------
 # Define the function and then call it below.
 
 
-def convert_temperature(temp,tempType):
-    tempType = tempType.lower()
-    if tempType=='C':
-        return (temp*(9/5))+32
-    if tempType=='F':
-        return (temp-32)*5/9
+def convert_temperature(temp, unit):
+    u = unit.upper()
+    if u == "C":
+        return (temp * 9/5) + 32
+    if u == "F":
+        return (temp - 32) * 5/9
+    raise ValueError("Invalid unit. Use 'C' or 'F'.")
 
 
 print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
