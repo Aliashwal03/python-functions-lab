@@ -184,17 +184,15 @@ print('-------------------------------------------------------------------------
 #
 # Define the function and then call it below.
 
-def basic_calculator(n1,n2,operation):
-    operation = operation.lower()
-
-    if operation== 'subtract':
-        return n1-n2
-    if operation== 'add':
-        return n1+n2
-    if operation== 'multiply':
-        return n1*n2
-    if operation== 'divide':
-        return n1/n2
-    return('enter a valid operation')
+def basic_calculator(n1, n2, operation):
+    op = operation.lower()
+    if op == "add": return n1 + n2
+    if op == "subtract": return n1 - n2
+    if op == "multiply": return n1 * n2
+    if op == "divide":
+        if n2 == 0:
+            raise ZeroDivisionError("Cannot divide by zero")
+        return n1 / n2
+    raise ValueError("Invalid operation")
 
 print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"))
