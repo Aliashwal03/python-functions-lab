@@ -120,12 +120,7 @@ print('-------------------------------------------------------------------------
 
 
 def largest (n1,n2,n3):
-    largest=n1
-    if n1<n2:
-        largest=n2
-    if n2<n3:
-        largest=n3
-    return largest
+   return max(n1, n2, n3)
 print('Exercise 6:', largest(10, 4, 3))
 
 print('--------------------------------------------------------------------------------')
